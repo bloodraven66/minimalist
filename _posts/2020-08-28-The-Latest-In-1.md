@@ -21,8 +21,6 @@ Contrastive loss has been in use for over a decade in works such as [1], [2]. In
 
 <b><a href="file:///home/sathvik/Documents/github/bloodraven66.github.io/_posts/test.html#cpc-paper">1. Representation Learning with Contrastive Predictive Coding[3]</a></b>
 This work combines autoregressive modelling with a contrastive loss to train the model in an end to end manner. The authors present the results in 4 domains - vision, text, speech and RL. Initially an encoder projects the input data into a compact latent space. An autoregressive model is used to make predictions of next latent representation. <br>
-![Convolution Operation]({{ '/assets/images/Selection_072.png' | relative_url }})
- <br>
 ![cpc]({{ '/assets/images/Selection_068.png' | relative_url }})
 The authors reason that predicting the next time step data from latent space is computationally expensive and often ignores the context of previous time step. So to learn the features of the data in use, they encode both the latent embedding and the target and compare it with a contrastive loss. They name their contrastive loss as InfoNCE which is as follows:
 ![infonce]({{ '/assets/images/Selection_070.png' | relative_url }})
