@@ -18,7 +18,7 @@ Self-supervision has been studied from a long time. Geoffrey Hinton developed pr
 Contrastive loss has been in use for over a decade in works such as [1], [2]. In NLP, with Word2Vec, the surrounding words are predicted using contrastive loss. Qouting [2] - 'In less mathematical terms, the idea behind noise-contrastive estimation is learning by comparison'. It is used as a loss function on latent space projections of input data. How exactly it is done, what is the data and what it is compared to is the crux of research in this field. I will go through some of the recent papers utilising contrastive learning to learn without supervision.
 
 
-<ol>
+
 <li><b><a href="file:///home/sathvik/Documents/github/bloodraven66.github.io/_posts/test.html#cpc-paper">Representation Learning with Contrastive Predictive Coding[3]</a></b></li>
 This work combines autoregressive modelling with a contrastive loss to train the model in an end to end manner. The authors present the results in 4 domains - vision, text, speech and RL. Initially an encoder projects the input data into a compact latent space. An autoregressive model is used to make predictions of next latent representation. <br>
 ![Convolution Operation]({{ '/assets/images/Selection_072.png' | relative_url }})
