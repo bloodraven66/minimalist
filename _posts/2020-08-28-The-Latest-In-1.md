@@ -21,9 +21,9 @@ Contrastive loss has been in use for over a decade in works such as [1], [2]. In
 <ol>
 <li><b><a href="file:///home/sathvik/Documents/github/bloodraven66.github.io/_posts/test.html#cpc-paper">Representation Learning with Contrastive Predictive Coding[3]</a></b></li>
 This work combines autoregressive modelling with a contrastive loss to train the model in an end to end manner. The authors present the results in 4 domains - vision, text, speech and RL. Initially an encoder projects the input data into a compact latent space. An autoregressive model is used to make predictions of next latent representation.
-<center>![cpc]({{ '/assets/images/Selection_068.png' | relative_url }})</center><br>
+![cpc]({{ '/assets/images/Selection_068.png' | relative_url }})
 The authors reason that predicting the next time step data from latent space is computationally expensive and often ignores the context of previous time step. So to learn the features of the data in use, they encode both the latent embedding and the target and compare it with a contrastive loss. They name their contrastive loss as InfoNCE which is as follows:
-<br><center>![infonce]({{ '/assets/images/Selection_070.png' | relative_url }})</center><br>
+![infonce]({{ '/assets/images/Selection_070.png' | relative_url }})
 This loss function tries to maximise the mutual information between the encoded representations. For training, 2 sets of examples are drawn from a distribution. When the embedding and predicted embedding are from same input, it is a positive pair and when they are from different inputs, then it is called a negative pair. MI is maximised for positive pairs while it is minimised for negative pairs. This way, the model learns the features of a particular data point. The authors use strided convolutions and GRU for the autoregressive model.
 <br>
 I think this paper is pretty impressive based on it's performance on various domain data, showing the significance of such methods to generalise towards any real world data.
@@ -34,7 +34,7 @@ I think this paper is pretty impressive based on it's performance on various dom
 Contrastive Multiview Coding[4]</a></b></li>
 In this work, the authors learn a representation that aims to maximise mutual information between different views of the same image. Here, the views are image channels such as luminance, chrominance, depth, and optical flow.
 Similarly as in CPC, two views are projected into a latent space. If they are positive pairs, then the MI should be maximised otherwise, for negative pairs it is minimised.
-<br><center>![cmc]({{ '/assets/images/Selection_071.png' | relative_url }})</center><br>
+![cmc]({{ '/assets/images/Selection_071.png' | relative_url }})
 The objective funtion tries to bring the two views closer. Cosine similairty between the two network predictions is calculated and negative log likelihood of these scores is computed which acts as the loss. One way to train this would be to take one view to be optimised over and take pairs with other views. A more, general formulation would be taking pairs of all the views. Then the objective function would be the summation of functions of all view pairs.<br>
 A memory bank is used to retrieve negative samples for the positive samples whenever required. This helps in maving more negative examples though they won't be from the current weights so it might harm the performance. One key idea is that they want to maximise the good information between views and minise the bad information. So the idea behind CMC is that this can be a chieved by doing infomax learning on two views that share the signal but have independant noise. They also perform experiments to test this hypothesis.<br>
 
@@ -45,7 +45,7 @@ A memory bank is used to retrieve negative samples for the positive samples when
 Momentum Contrast for Unsupervised Visual Representation Learning[5]</a>
 </b></li>
 In this paper, the authors treat training encoder with contrastive learning as a dictionary look-up task. There are two networks. Netwoirk 1 is called  an encoder which takes a query as an input. Network two takes a mini batch and the outputs are enqueued into a dictionary. The dictionary size is larger than the mini batch so that a large number of negative samples can be drawn, inclusing old samples. Old batches are dequeued when dictionary size limit is reached.
-<br><center><br><center>![moco]({{ '/assets/images/Selection_072.png' | relative_url }})</center><br>
+![moco]({{ '/assets/images/Selection_072.png' | relative_url }})
 Basically, for every image going to the encoder, a large number of images are present to compare whether it is the same. Encoder is trained with backprop with contrastive loss. network 2 is a moving average of encoder. The same batch is fed to both the networks but with different data augmentations. Postive and negative pairs are formed and InfoNCE loss is used to distinguish between the type of pairs. The encoder is updated with the loss while the nother network is updated from encoder weights.
 
 
@@ -54,7 +54,7 @@ Basically, for every image going to the encoder, a large number of images are pr
 A Simple Framework for Contrastive Learning of Visual Representations[6]</a>
 </b></li>
 As the name suggests, this looks pretty simple and straightforward. Though, it needs specific functions, augmentations to bring out the best results.
-<br><center><br><center>![simclr]({{ '/assets/images/Selection_073.png' | relative_url }})</center><br>
+![simclr]({{ '/assets/images/Selection_073.png' | relative_url }})
 For every minibatch, two sets of augmentation drawn and they are projected  using 2 networks. Then similairty between every pair of image is computed. Then negative log softmax of the pairwise similarity score across the batch is taken as the loss. Basically, for every pair in a N size batch, 2N - 1 projected data is considered as negative pairs. They show that CL works well with very large batches(4096), for which they use the LARS optimizer. They reveal that only few selected data augmentation give out good results, color augmentations being the important ones.
 
 
@@ -64,7 +64,7 @@ For every minibatch, two sets of augmentation drawn and they are projected  usin
 Bootstrap Your Own Latent: A New Approach to Self-Supervised Learning[7]</a>
 </b></li>
 In this work, negative examples are not used. This again has 2 networks to predict latent of 2 different augmented pairs. From a given representation called target, a different representation called online is trained by predicted the target. The target netowrk is an exponential moving average of the online network. By iteratingn the procedure, the authors' idea is to build a sequence of representations with increasing quality.
- <center><br><center>![byol]({{ '/assets/images/Selection_072.png' | relative_url }})</center><br>
+![byol]({{ '/assets/images/Selection_072.png' | relative_url }})
 
  A mean squared error is used between the noramlised predictions of both networks. The augmentations are the same as the ones used in SimCLR.
 </ol>
