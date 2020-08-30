@@ -44,7 +44,6 @@ A memory bank is used to retrieve negative samples for the positive samples when
 
 
 
-<br>
 - <b><a href="https://bloodraven66.github.io/2020/08/27/The-Latest-In-1#moco">
 Momentum Contrast for Unsupervised Visual Representation Learning[5]</a>
 </b><br>
