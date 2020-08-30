@@ -19,7 +19,7 @@ Contrastive loss has been in use for over a decade in works such as [1], [2]. In
 
 
 
-- <b><a href="file:///home/sathvik/Documents/github/bloodraven66.github.io/_posts/test.html#cpc-paper">Representation Learning with Contrastive Predictive Coding[3]</a></b>
+- <b><a href="https://bloodraven66.github.io/2020/08/27/The-Latest-In-1#cpc-paper">Representation Learning with Contrastive Predictive Coding[3]</a></b>
 This work combines autoregressive modelling with a contrastive loss to train the model in an end to end manner. The authors present the results in 4 domains - vision, text, speech and RL. Initially an encoder projects the input data into a compact latent space. An autoregressive model is used to make predictions of next latent representation. <br>
 ![cpc]({{ '/assets/images/Selection_068.png' | relative_url }})
 The authors reason that predicting the next time step data from latent space is computationally expensive and often ignores the context of previous time step. So to learn the features of the data in use, they encode both the latent embedding and the target and compare it with a contrastive loss. They name their contrastive loss as InfoNCE which is as follows:
@@ -30,7 +30,7 @@ I think this paper is pretty impressive based on it's performance on various dom
 
 
 
-- <b><a href="file:///home/sathvik/Documents/github/bloodraven66.github.io/_posts/test.html#cmc-paper">
+- <b><a href="https://bloodraven66.github.io/2020/08/27/The-Latest-In-1#cmc-paper">
 Contrastive Multiview Coding[4]</a></b>
 In this work, the authors learn a representation that aims to maximise mutual information between different views of the same image. Here, the views are image channels such as luminance, chrominance, depth, and optical flow.
 Similarly as in CPC, two views are projected into a latent space. If they are positive pairs, then the MI should be maximised otherwise, for negative pairs it is minimised.
@@ -41,7 +41,7 @@ A memory bank is used to retrieve negative samples for the positive samples when
 
 
 
-- <b><a href="file:///home/sathvik/Documents/github/bloodraven66.github.io/_posts/test.html#moco">
+- <b><a href="https://bloodraven66.github.io/2020/08/27/The-Latest-In-1#moco">
 Momentum Contrast for Unsupervised Visual Representation Learning[5]</a>
 </b>
 In this paper, the authors treat training encoder with contrastive learning as a dictionary look-up task. There are two networks. Netwoirk 1 is called  an encoder which takes a query as an input. Network two takes a mini batch and the outputs are enqueued into a dictionary. The dictionary size is larger than the mini batch so that a large number of negative samples can be drawn, inclusing old samples. Old batches are dequeued when dictionary size limit is reached.
@@ -49,7 +49,7 @@ In this paper, the authors treat training encoder with contrastive learning as a
 Basically, for every image going to the encoder, a large number of images are present to compare whether it is the same. Encoder is trained with backprop with contrastive loss. network 2 is a moving average of encoder. The same batch is fed to both the networks but with different data augmentations. Postive and negative pairs are formed and InfoNCE loss is used to distinguish between the type of pairs. The encoder is updated with the loss while the nother network is updated from encoder weights.
 
 
-- <b><a href="file:///home/sathvik/Documents/github/bloodraven66.github.io/_posts/test.html#simclr">
+- <b><a href="https://bloodraven66.github.io/2020/08/27/The-Latest-In-1#simclr">
 A Simple Framework for Contrastive Learning of Visual Representations[6]</a>
 </b>
 As the name suggests, this looks pretty simple and straightforward. Though, it needs specific functions, augmentations to bring out the best results.
@@ -59,7 +59,7 @@ For every minibatch, two sets of augmentation drawn and they are projected  usin
 
 
 
-- <b><a href="file:///home/sathvik/Documents/github/bloodraven66.github.io/_posts/test.html#byol">
+- <b><a href="https://bloodraven66.github.io/2020/08/27/The-Latest-In-1#byol">
  Bootstrap Your Own Latent: A New Approach to Self-Supervised Learning[7]</a>
 </b>
 In this work, negative examples are not used. This again has 2 networks to predict latent of 2 different augmented pairs. From a given representation called target, a different representation called online is trained by predicted the target. The target netowrk is an exponential moving average of the online network. By iteratingn the procedure, the authors' idea is to build a sequence of representations with increasing quality.
