@@ -3,7 +3,7 @@ layout: default
 title: About
 permalink: /about/
 ---
-I code, read and write. Also spend a lot of unnecessary time staring at training plots.
+I code, read and write. Also spend a lot of time staring at training plots.
 <br>
 Currently working as a research assistant at SPIRE Lab [IISc, Bangalore, India] in the intersecion of speech and deep learning.
 <br>
