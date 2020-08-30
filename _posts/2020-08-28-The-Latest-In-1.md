@@ -8,7 +8,7 @@ comments: true
 An overview of recent progress in self-suprvised learning research in DL.
 
 <!--more-->
-
+![Convolution Operation]({{ '/assets/images/Selection_072.png' | relative_url }})
 NOTE: not completed
 
 Supervision is an important aspect of teaching machines. Almost all the AI based products being in use are a result of accurate supervised data during the training stages. In the recent years, a lot of work has been put in towards learning data without labels. The creation of an algorithm which can reliably perform this can drastically change the use of Machine learning for real world applications.
