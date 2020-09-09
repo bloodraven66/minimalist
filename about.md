@@ -21,6 +21,7 @@ Other interests:
 </ul>
 
 <b>News:</b><br>
+<b>Sept 2020 :</b> Joined MyHealthcareAI as a part-time consultant.<br>
 <b>Aug 2020 :</b> Joined SPIRE Lab, IISc to work on speech+DL problem statements.<br>
 <b>March 2020 :</b> Left MyHealthcareAI to become an independeant researcher - Completing prior research projects, exploring latest research in different areas.<br>
 <b>Jan 2020 :</b> Our <a href='https://ieeexplore.ieee.org/document/9053682'>Work</a> on Motor Neuron disease classification has been accepted for ICASSP 2020.<br>
