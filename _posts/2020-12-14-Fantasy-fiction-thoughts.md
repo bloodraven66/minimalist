@@ -24,13 +24,4 @@ I adore WoT for another reason- I got to know about Brandon Sanderson. You see, 
 
 Recently, I read started reading a new series by Sanderson, the stormlight archive. It is a 10 book series with 4 published as of now. I have read the first 3 as of December 2020 . My opinion of this will obviously vary as I read more of the series in the coming years. As of now, I like a lot of things about it though I feel a few things could have done a lot better. I don't really have anything negative to talk about it, just that it didn't live up to the hype on certain plotlines. But then, it hasn't even reached midway so I don't think it is right to judge it at this moment. It is a delight to read, I hope the rest of the books are released as soon as possible(probably 10-15 years :-[ )
 
-These were my thoughts some of my favorite fantasy fiction I read! To summarise, Wheel of Time is my favorite by far, followed by stormlight archi ve, mistborn. Harry potter will 'always' be special to me, not sure exacty why it is the case. Let me ponder regarding it another day. I have read a lot of other books of other genre but I tend to get bored from those easily and I finish them only because I already started it. Fantasy fiction is the only genre I can read on and on for days. Super fond of these captivating large-scale stories which are literally out of this world! 
-
-
-
-
-
-
-
-
-![cpc]({{ '/assets/images/Selection_068.png' | relative_url }})
+These were my thoughts some of my favorite fantasy fiction I read! To summarise, Wheel of Time is my favorite by far, followed by stormlight archi ve, mistborn. Harry potter will 'always' be special to me, not sure exacty why it is the case. Let me ponder regarding it another day. I have read a lot of other books of other genre but I tend to get bored from those easily and I finish them only because I already started it. Fantasy fiction is the only genre I can read on and on for days. Super fond of these captivating large-scale stories which are literally out of this world!
