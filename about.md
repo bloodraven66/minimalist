@@ -21,6 +21,7 @@ Other interests:
 </ul>
 
 <b>News:</b><br>
+<b>Dec 2020 :</b> Delivered a talk on Approximate Inference Methods at SPIRE Lab.<br>
 <b>Sept 2020 :</b> Joined MyHealthcareAI as a part-time consultant.<br>
 <b>Aug 2020 :</b> Joined SPIRE Lab, IISc to work on speech+DL problem statements.<br>
 <b>March 2020 :</b> Left MyHealthcareAI to become an independeant researcher - Completing prior research projects, exploring latest research in different areas.<br>
