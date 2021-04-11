@@ -21,6 +21,9 @@ Other interests:
 </ul>
 
 <b>News:</b><br>
+<b>April 2021 :</b> Our work on 'Estimating articulatory movements in speech production with transformer
+networks' has been sumbitted to INTERSPEECH 2021, preprint out soon.<br>
+<b>March 2021 :</b> Joined Gates Foundation project to work on Speech recognition with Indian languages at SPIRE Lab, IISc.<br>
 <b>Dec 2020 :</b> Delivered a talk on Approximate Inference Methods at SPIRE Lab.<br>
 <b>Sept 2020 :</b> Joined MyHealthcareAI as a part-time consultant.<br>
 <b>Aug 2020 :</b> Joined SPIRE Lab, IISc to work on speech+DL problem statements.<br>
