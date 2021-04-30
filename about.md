@@ -3,22 +3,16 @@ layout: default
 title: About
 permalink: /about/
 ---
-I code, read and write. Also spend a lot of time staring at training plots.
+I enjoy learning more and working in different research fields - Speech(Production, TTS, ASR), Vision(Unsupervised), Reinforcement Learning(TBD). I am currently employed at SPIRE Lab, IISc, Bangalore on a Speech recognition project on Indian languages, funded by Gates Foundatation. Previously, I worked at a startup - MyHealthcareAI, on various vision, NLP, speech DL tasks. 
 <br>
-Currently working as a research assistant at SPIRE Lab [IISc, Bangalore, India] in the intersecion of speech and deep learning.
+I will be applying for Grad school for 2022 Fall intake. Do let me know if you think I'll be a good addition to your group!
 <br>
-<br>
-Research interests:
+Main Research interests:
 <ul>
-<li>Better representations(modelling over attention, latent space etc)</li>
-<li>Better training(self, semi, un-supervised learning)</li>
+<li>Multi-modal</li>
+<li>Generative modelling</li>
 </ul>
 
-Other interests:
-<ul>
-<li>Reading novels(fav: Wheel of Time series)</li>
-<li>Casual Dota player, Hardcore fan(Nigma/OG)</li>
-</ul>
 
 <b>News:</b><br>
 <b>April 2021 :</b> Our work on 'Estimating articulatory movements in speech production with transformer
