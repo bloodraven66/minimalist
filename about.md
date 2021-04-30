@@ -9,7 +9,7 @@ I enjoy learning more and working in different research fields - Speech(Producti
 </b><br><br>
 Main Research interests:
 <ul>
-<li>Multi-modal Learning</li>
+<li>Multi-modal learning</li>
 <li>Generative modelling</li>
 </ul>
 
