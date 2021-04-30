@@ -10,7 +10,7 @@ I enjoy learning more and working in different research fields - Speech(Producti
 Main Research interests:
 <ul>
 <li>Multi-modal learning</li>
-<li>Explicit Generative modelling</li>
+<li>Explicit generative modelling</li>
 </ul>
 
 
