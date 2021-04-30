@@ -9,7 +9,7 @@ I will be applying for Grad school for 2022 Fall intake. Do let me know if you t
 <br><br>
 Main Research interests:
 <ul>
-<li>Multi-modal</li>
+<li>Multi-modal Learning</li>
 <li>Generative modelling</li>
 </ul>
 
