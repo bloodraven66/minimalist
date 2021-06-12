@@ -15,8 +15,11 @@ Main Research interests:
 
 
 <b>News:</b><br>
+<b>April 2021 :</b> Our submission for INTERSPEECH 2021 Show and Tell Programme has been accepted.
+<b> 2021 :</b> Our work on 'Estimating articulatory movements in speech production with transformer
+networks' has been accepted at INTERSPEECH 2021 for oral presentation.
 <b>April 2021 :</b> Our work on 'Estimating articulatory movements in speech production with transformer
-networks' has been submitted to INTERSPEECH 2021, preprint: https://arxiv.org/abs/2104.05017.<br>
+networks' has been accepted at INTERSPEECH 2021 for oral presentation.<br>
 <b>March 2021 :</b> Joined Gates Foundation project to work on Speech recognition with Indian languages at SPIRE Lab, IISc.<br>
 <b>Dec 2020 :</b> Delivered a talk on Approximate Inference Methods at SPIRE Lab.<br>
 <b>Sept 2020 :</b> Joined MyHealthcareAI as a part-time consultant.<br>
