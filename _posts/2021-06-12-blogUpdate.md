@@ -8,4 +8,4 @@ comments: true
 Introducing weekly comprehensive blog posts on deep learning research topics!
 
 <!--more-->
-I've been lethargic on the commitment on blogging in the post. Starting this week (mid June 2019), I'll dedicate time every Saturday to add a new blog here, on my website. Be on the lookout for in depth blogs on some of the latest research topics in deep learning!   
+I've been lethargic on the commitment on blogging in the post. Starting this week (mid June 2021), I'll dedicate time every Saturday to add a new blog here, on my website. Be on the lookout for in depth blogs on some of the latest research topics in deep learning!   
