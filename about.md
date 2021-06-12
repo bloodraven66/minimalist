@@ -15,7 +15,7 @@ Main Research interests:
 
 
 <b>News:</b><br>
-<b>April 2021 :</b> Our submission for INTERSPEECH 2021 Show and Tell Programme has been accepted.
+<b>April 2021 :</b> Our submission for INTERSPEECH 2021 Show and Tell Programme has been accepted.<br>
 <b> 2021 :</b> Our work on 'Estimating articulatory movements in speech production with transformer
 networks' has been accepted at INTERSPEECH 2021 for oral presentation.
 <b>April 2021 :</b> Our work on 'Estimating articulatory movements in speech production with transformer
