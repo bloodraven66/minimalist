@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ""
+title:  "Blog Update June 2021"
 date:   2021-06-12 01:03:29 +0200
 categories: update
 comments: true
