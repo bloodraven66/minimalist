@@ -31,11 +31,11 @@ There has been decades of research in speech synthesis. Speech synthesis program
 
 The research direction has changed over the years and is currently adopting the widely used transformer architectures. It is natural that the machine learning research communitiy in general is shifiting towards transformers. It has achieved tremendous success in Natural Language Processing (NLP) with development of large scale systems such as BERT, GPT. It offers a lot of advantages which is suited for sequence tasks such as synthesis. This however, is not a review on transformers, it's a topic for another day. For now, let's start with an architecture which came out in 2017 and still used for comparision, which isn't really the norm in current research involving deep learning .
 
-Tacotron:<br>
+<b>Tacotron:</b><br>
 The tacotron [1] simplified the steps involved in the speech synthesis task and in many ways, lowered the bar on expertise required towards building such systems. In many of the older works, it was necessary to design different blocks for linguistic features, acoustic models, duration model, complex signal processing based vocoders etc. A lot of domain knowledge was required in building the models. Tacotron enabled the neural network architecture to handle a lot of these components and making it end-to-end trainable. <br>
 ![taco]({{ '/assets/images/taco.png' | relative_url }})
 <br>
-The encoder consists of a charecter embedding followed by Encoder Pre-Net. The output is passed through a CBGH module. CBGH consits of 1D convolution layers followed by a GRU. This is passed to a autoregressive decoder with tanh attention. GRU with vertical connections are used, where the input to each time step is the attention context vector, previous time step output and hidden units. These outputs are then passed to another CBGH module. The Mel Spectogram is choosen as a target. The audio is reconstructed using Griffin Lim reconstruction algorithm.<br>
+The encoder consists of a charecter embedding followed by few dense layers referred to as encoder pre-net. The output is passed through a CBGH module. CBGH consits of 1D convolution layers followed by a GRU. This is passed to a autoregressive decoder with tanh attention. This attention mechanism is responsible for alignment between the input and output sequence. GRU with vertical connections are used, where the input to each time step is the attention context vector, previous time step output and hidden units. These outputs are then passed to another CBGH module., The Mel Spectogram is choosen as a target.  The authors modified the autoregressive framework such that <i>r</i> non-overlapping frames can be predicted instead of 1 a time. A lot of benifits were observed with it towards faster, stable training with lesser parametrs. The audio is reconstructed using Griffin Lim reconstruction algorithm.<br>
 
 Tacotron has become a standard architecture which researchers look at improving on. It has a lot of contributions to it. It provides a way to perform unsupervised duration modelling with attention. It's choice of Mel spectogram as target is now commonly used in all synthesis research. Even many of the parameters used in it's implementation is used as the standard and applied on other works without any modifications.
 
@@ -45,18 +45,18 @@ This is an improvement on the Tacotron which come out in the same year as tacotr
 ![taco2]({{ '/assets/images/taco2.png' | relative_url }})
 <br>
 
-This work also uses wavenet as a vocoder instead of Griffin Lim reconstruction. Griffin Lim is known to generate audio with lower quality, it has it's charecteristic mettalic sound to it.
+This work also uses wavenet as a vocoder instead of Griffin Lim reconstruction. Griffin Lim is known to generate audio with lower quality, it has it's charecteristic metallic sound to it.
 
 Now, let us look at transformer architectures applied for this task.
 
 Transformer TTS:<br>
-This work looks at the resemblence of a view of Tacotron2 setup with original Transformer architecture. Both consists of encoder and decoder, with an attention component combining information between them. With this formulation, they diretly utilise transformers for speech synthesis task with mel spectogram as target.
+This work looks at the resemblence of a view of Tacotron2 setup with original Transformer architecture. Both consists of encoder and decoder, with an attention component combining information from encoder to decoder states. With this formulation, they diretly utilise transformers for speech synthesis task with mel spectogram as target.
 
 ![ttts]({{ '/assets/images/ttts.png' | relative_url }})
 
-Similar to tacotron, an embedding is used for input. This is passed to transformer encoder. At the same time, spectogram is passed to the decoder, which consists of dense layers followed by masked self attention layer. A multi head attention of transformer replaces the local senstive attention from tacotron2. The encoder and decoder states are combined in this attention. This is followed by Post net and stop token layers as utilised in tacotron2.
+Similar to tacotron, an embedding is used for input. This is passed to transformer encoder. At the same time, spectogram is passed to the decoder, which consists of dense layers followed by masked self attention layer. A multi head attention of transformer replaces the local senstive attention from tacotron2. The encoder and decoder states are combined in this attention. This is followed by Post net and stop token layers as utilised in tacotron2. A different version of positional encoding was used which allowed for training a scale parameter for the encodings.
 
-A key advantage is in being able to train much faster in transformers.
+Key advantage is the usage of transformers and the benifits it brings in terms of learning better and faster representation.
 
 FastSpeech:
 FastSpeech simplifies the architecture by using encoder architecture for the decoder as well. There is no Mel spectogram conditioning involved at the decoder. The duration modelling is done by an expliit duration predictor consisting of few 1D convolution layers. This makes the encoder and decoder fully parallel at all times on the sequence.
@@ -83,6 +83,9 @@ Again, this work builds on the fastspeech architetcure, with a focus on incorpor
 ![prosody]({{ '/assets/images/prosody.png' | relative_url }}) <br>
 
 The ground truth prosody is extracted by rule based as well as Conv 1D layers. These are predicted by convolutional layers and all the predictions are concatenated and used to contruct decoder sequence length.
+
+<b>Conclusions:</b><br>
+I've covered only a few work done in this field. There is much more work done in recent years towards models like DeepVoice, Flowtron etc which I will cover in a different article. Taking a look at the papers mentioned here, tacotron can be regarded as a monumental shift in the research direction. A lot of work is coming up with FastSpeech style models with focus on conditioning additional information into the model to be able to create realistic audio. It looks like transformers are here to stay in TTS research, looking forward to see how different challenges are addressed in future works.
 
 
 
