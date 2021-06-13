@@ -9,8 +9,6 @@ This is an overview of recent progress in Text to Speech models.
 
 <!--more-->
 
-In PROGRESS
-
 There has been decades of research in speech synthesis. Speech synthesis programs have been available in computers since the 1990s. Nowadays, it is easy to access services which can provide TTS freely. You don't need to look further than your smartphones. This doesn't mean Speech Synthesis has been solved. There are still a lot of challenges assosiated with the technology. Some of these are as follows:
 <ul>
   <li><b>Large amount of training data:</b>
