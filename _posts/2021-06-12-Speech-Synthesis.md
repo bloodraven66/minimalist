@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Speech Synthesis"
-date:   2021-06-12 01:03:29 +0200
+date:   2021-06-12 01:03:29 +0530
 categories: research
 comments: true
 ---
