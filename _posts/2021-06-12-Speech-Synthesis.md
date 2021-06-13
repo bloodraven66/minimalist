@@ -39,7 +39,7 @@ The encoder consists of a charecter embedding followed by few dense layers refer
 
 Tacotron has become a standard architecture which researchers look at improving on. It has a lot of contributions to it. It provides a way to perform unsupervised duration modelling with attention. It's choice of Mel spectogram as target is now commonly used in all synthesis research. Even many of the parameters used in it's implementation is used as the standard and applied on other works without any modifications.
 
-Tacotron2:<br>
+<b>Tacotron2:</b><br>
 This work [2] is an improvement on the Tacotron which come out in the same year as tacotron. The model structure is same that as Tacotron. It uses LSTM layers instead of GRU and local sentive attention in the decoder. It also incorporates a convolutional post-net layer with residual connection instead if CBHG layers used in Tacotron. Overall, I would say different modules of Tacotron were replaced by similar alternatives and experimented on, the best perfoming layers were selected for this model.
 
 ![taco2]({{ '/assets/images/taco2.png' | relative_url }})
@@ -49,7 +49,7 @@ This work also uses wavenet as a vocoder instead of Griffin Lim reconstruction. 
 
 Now, let us look at transformer architectures applied for this task.
 
-Transformer TTS:<br>
+<b>Transformer TTS:</b><br>
 This work [3] looks at the resemblence of a view of Tacotron2 setup with original Transformer architecture. Both consists of encoder and decoder, with an attention component combining information from encoder to decoder states. With this formulation, they diretly utilise transformers for speech synthesis task with mel spectogram as target.
 
 ![ttts]({{ '/assets/images/ttts.png' | relative_url }})
@@ -58,7 +58,7 @@ Similar to tacotron, an embedding is used for input. This is passed to transform
 
 Key advantage is the usage of transformers and the benifits it brings in terms of learning better and faster representation.
 
-FastSpeech: <br>
+<b>FastSpeech:</b> <br>
 FastSpeech [4] simplifies the architecture by using encoder architecture for the decoder as well. There is no Mel spectogram conditioning involved at the decoder. The duration modelling is done by an expliit duration predictor consisting of few 1D convolution layers. This makes the encoder and decoder fully parallel at all times on the sequence.
 
 ![fs]({{ '/assets/images/fs.png' | relative_url }})<br>
@@ -67,17 +67,17 @@ This has insipred a lot of similar architectures with small modifications.
 
 
 
-FastPitch:<br>
+<b>FastPitch:</b><br>
 This work [5] starts with the FastSpeech architecture and adds an additional component of predicting pitch at the encoder representation.
 
-FastSpeech2:<br>
+<b>FastSpeech2:</b><br>
 FastSpeech2 [6] incororates duration, pitch and energy prediction in the encoder representation. It also has an additional component called fastspeech2s. This module can perform end to end waveform gegenration with the TTS module.
 
 ![fs2]({{ '/assets/images/fs2.png' | relative_url }}) <br>
 It consists of non causal convolutionals and gated activation as used in wavenet. It takes slices of decoder hidden and predicts the time steps required. The mel spectogram decoder is discared on inference. It uses adversarial training by having a discriminator based on Parallel Wavegan.
 The key contribution od this work is being able to train waveform generation by the same model. More work will be inspired by this for sure!
 
-Hierarchical Prosody Modeling for Non-Autoregressive Speech Synthesis:<br>
+<b>Hierarchical Prosody Modeling for Non-Autoregressive Speech Synthesis:</b><br>
 Again, this work [7] builds on the fastspeech architetcure, with a focus on incorporating prosody information. Prosody is the variation in speech signals such as rhythm, intonation, stress etc. At the encoder representation, it has an additional component which predicts prosody.
 
 ![prosody]({{ '/assets/images/prosody.png' | relative_url }}) <br>
