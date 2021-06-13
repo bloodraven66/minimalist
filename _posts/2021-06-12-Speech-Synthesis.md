@@ -13,19 +13,26 @@ In PROGRESS
 
 There has been decades of research in speech synthesis. Speech synthesis programs have been available in computers since the 1990s. Nowadays, it is easy to access services which can provide TTS freely. You don't need to look further than your smartphones. This doesn't mean Speech Synthesis has been solved. There are still a lot of challenges assosiated with the technology. Some of these are as follows:
 <ul>
-  <li>Large amount of training data</li>
-  <li>Adapting to different speakers</li>
-  <li>Natural and realistic speech generation</li>
-  <li>Duraion modelling</li>
+  <li><b>Large amount of training data:</b>
+
+  TTS algorithms require a large amount of clean training data in order to perform well. While this is available in english and other commonly used langauges, it can be hard to build good TTS machines on every langauge.</li>
+  <li><b>Adapting to different speakers:</b>
+
+  Many of the TTS algorithms in use today is trained on single speaker dataset. Transfering to a different voice with changes in speaking style, accent etc is non-trivial.</li>
+  <li><b>Natural and realistic speech generation</b>:
+
+  TTS algorithms are not trained on audio directly. It is much easier to learn towards a representation such as spectograms, after which it can be reconstructed using vocoders. It is still an active research problem on building good vocoders which can generate realistic speech. </li>
+  <li><b>Duraion modelling</b>
+
+  A key challenge assosiated with speech synthesis is that the sequence lengths for input text and output speech are going to be much different. These are going to change for different sentences uttered, with a lot of variations on pitch, pronunciation, pace, etc. While there are supervised and unsupervised methods available to deal with it, it has a trade off w.r.t computational complexity, on each of the methods.
+  </li>
 </ul>
  These challenges are in the core formulation of synthesis tasks. We shall cover these in detail while going through some of the recent papers.
 
-The research direction has changed over the years and is currently adopting the widely used transformer architectures. It is natural that the machine learning research communitiy in general is shifiting towards transformers. It has achieved tremendous success in Natural Language Processing (NLP) with development of large scale systems such as BERT, GPT. It offers a lot of advantages which is suited for sequence tasks such as synthesis. This however, is not a review on transformers, it's a topic for another day. For now, let's start with an architecture which came out in 2017 and still used for comparision, which isn't really a norm in current deep learning research.
+The research direction has changed over the years and is currently adopting the widely used transformer architectures. It is natural that the machine learning research communitiy in general is shifiting towards transformers. It has achieved tremendous success in Natural Language Processing (NLP) with development of large scale systems such as BERT, GPT. It offers a lot of advantages which is suited for sequence tasks such as synthesis. This however, is not a review on transformers, it's a topic for another day. For now, let's start with an architecture which came out in 2017 and still used for comparision, which isn't really the norm in current research involving deep learning .
 
 Tacotron:<br>
-The tacotron [1] simplified the steps involved in the speech synthesis task and in many ways, lowered the bar on expertise required towards building such systems. In many of the older works, it was necessary to design different blocks for linguistic features, acoustic models, duration model, complex signal processing based vocoders etc. A lot of domain knowledge was required in building the models. Tacotron enabled the neural network architecture to handle a lot of these components. <br>
-A key challenge assosiated with speech synthesis is that the sequence lengths for input text and output speech are going to be much different. These are going to change for different sentences uttered, with a lot of variations on pitch, pronunciation, pace, etc. All these features have to be learnt by the model. An additional component to the tacotron is that it is end-to-end trainable. <br>
-
+The tacotron [1] simplified the steps involved in the speech synthesis task and in many ways, lowered the bar on expertise required towards building such systems. In many of the older works, it was necessary to design different blocks for linguistic features, acoustic models, duration model, complex signal processing based vocoders etc. A lot of domain knowledge was required in building the models. Tacotron enabled the neural network architecture to handle a lot of these components and making it end-to-end trainable. <br>
 ![taco]({{ '/assets/images/taco.png' | relative_url }})
 <br>
 The encoder consists of a charecter embedding followed by Encoder Pre-Net. The output is passed through a CBGH module. CBGH consits of 1D convolution layers followed by a GRU. This is passed to a autoregressive decoder with tanh attention. GRU with vertical connections are used, where the input to each time step is the attention context vector, previous time step output and hidden units. These outputs are then passed to another CBGH module. The Mel Spectogram is choosen as a target. The audio is reconstructed using Griffin Lim reconstruction algorithm.<br>
