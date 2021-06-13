@@ -11,7 +11,14 @@ This is an overview of recent progress in Text to Speech models.
 
 In PROGRESS
 
-There has been decades of research in speech synthesis. Speech synthesis programs have been available in computers since the 1990s. Nowadays, it is easy to access services which can provide TTS freely. You don't need to look further than your smartphones. This doesn't mean Speech Synthesis has been solved. There are still a lot of challenges assosiated with the technology. Not all languages have digital data available to the extent of English. It is still difficult to train Text to Speech algorithms with data of different speakers. There are challenges in the core formulation of synthesis tasks. We shall cover these in detail while going through some of the recent papers.
+There has been decades of research in speech synthesis. Speech synthesis programs have been available in computers since the 1990s. Nowadays, it is easy to access services which can provide TTS freely. You don't need to look further than your smartphones. This doesn't mean Speech Synthesis has been solved. There are still a lot of challenges assosiated with the technology. Some of these are as follows:
+<ul>
+  <li>Large amount of training data</li>
+  <li>Adapting to different speakers</li>
+  <li>Natural and realistic speech generation</li>
+  <li>Duraion modelling</li>
+</ul>
+ These challenges are in the core formulation of synthesis tasks. We shall cover these in detail while going through some of the recent papers.
 
 The research direction has changed over the years and is currently adopting the widely used transformer architectures. It is natural that the machine learning research communitiy in general is shifiting towards transformers. It has achieved tremendous success in Natural Language Processing (NLP) with development of large scale systems such as BERT, GPT. It offers a lot of advantages which is suited for sequence tasks such as synthesis. This however, is not a review on transformers, it's a topic for another day. For now, let's start with an architecture which came out in 2017 and still used for comparision, which isn't really a norm in current deep learning research.
 
