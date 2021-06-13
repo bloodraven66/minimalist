@@ -89,7 +89,7 @@ I've covered only a few work done in this field. There is much more work done in
 
 Note: All architecture images are taken from their respective papers available on arxvi.org
 
-References:<br>
+<b>References:</b><br>
 [1] https://arxiv.org/abs/1703.10135 <br>
 [2] https://arxiv.org/abs/1712.05884 <br>
 [3] https://arxiv.org/abs/1809.08895 <br>
