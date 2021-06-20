@@ -5,7 +5,7 @@ date:   2021-06-19 12:03:29 +0530
 categories: research
 comments: true
 ---
-This is an overview of recent progress in generative models with Normalising Flow approach.
+This is an overview of some of the introductory work done in generative models with Normalising Flow approach.
 
 <!--more-->
 Generative modeling encompasses a range of techniques applied to learn the inherent distribution of data. There have been a lot of approaches in recent years which uses deep neural network to parameterise distributions. This post will cover some of the works which introduced and solidified Normalising Flow based generative models.<br>
