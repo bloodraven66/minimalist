@@ -34,7 +34,7 @@ In this work [2], the authors peform image compression with the variational vato
 The inference density <b>q</b> is made 0 by choosing a uniform distribution. The likelihood is the reconstruction loss., a squared error loss in case of gaussian distribution. The third term is seen as cross entropy between the marginal and the prior of the latent. The prior is defined as -
 ![paper2infer alt ><]({{ '/assets/images/paper2infer.png'}}){:height="120px" width="400px"}
 
-During training, quantisation is perfomed by adding uniform noise in the inference process as shown below. In this equation, <b>y</b> is obtained by the encoder. The prior is modelled as shown below as a nojn paramteric fully factorised density model.
+During training, quantisation is performed by adding uniform noise in the inference process as shown below. In this equation, <b>y</b> is obtained by the encoder. The prior is modelled as shown below as a non paramteric fully factorised density model.
 ![priorcompress alt ><]({{ '/assets/images/priorcompress.png'}}){:height="120px" width="450px"}
 
 Here, <b>Ψ</b> contains the parameters of each univariate distribution. All the densities are convolved with standard uniform density. The authors visualise quantised latents and infer that probabilistic coupling is present which is not represented by the prior used, Due to this, usage of hyperprior is visited.
@@ -60,7 +60,7 @@ This has a differentiable version for the backward pass, following the paper pap
 In order to reduce the number of bits in latent, it is multiplied by a importance map acquired by a learnable mask. This is done by comparing values in spatial locations with channel number. Due to this, some of the channels can be zero. This masking is done after the context model, which acts as the quantisation step.
 ![paper3fig alt ><]({{ '/assets/images/paper3fig.png'}}){:width="400px"}
 The models are trained using MS-SSIM metric with the imagenet dataset and tested on imagenet, B100, Urban100, Kodak datasets.
-This paper utilises masked convultion perfomed in PixelCNN and extends it to 3DCNN and views it as a compression tool. It also uses importance map techniques utilised in the field and incorporates it to quantise in this architecture.
+This paper utilises masked convultion performed in PixelCNN and extends it to 3DCNN and views it as a compression tool. It also uses importance map techniques utilised in the field and incorporates it to quantise in this architecture.
 
 <b>Joint Autoregressive and Hierarchical Priors for Learned Image Compression: </b><br>
 This work [4] extends on the work done in papers [2], [3]. The architecture introduced consists of an encoder and decoder with an autoregressive context model. It also includes a hyper encoder and hyper decoder which works on the encoder latents. The hyper deocder and cotext model outputs are used to predict both mean and scale paramters for the entropy model. The entire setup is shown below:
@@ -70,8 +70,9 @@ Each encoder latent is modelled as a gaussian convolved with an unit uniform dis
 Peak Signal to noise ratio (PSNR) is used as a metric to measure compression capability. Other metrics such as MSE and MS-SSIM are also reported on Kodak dataset.
 
 <b>Discussion:</b><br>
-The neural compression scheme has two components to it - compression rate and distortion. A trade off exists between the two as better reconstruction can be obtained with larger latent structure to derive it from. The compression process involves a feature transformation into a latent space followed by quantisation. This can be stored as bits through arithmetic coding. This is then decoded and recontructed back into images. This is naturally perfomed by an autoencoder framework, where the entopy of the bits used to store the file can be represented by the entropy of the latent space and the distortion can be measured by the reconstruction error. The papers summarised in this post is from 2017-18, so it may not be the state of the art as of 2021. The ideas here mainly consists of either a autoencoder with variational framework or models in latent space like PixelCNN for entropy coding. This field is closely related to generative modelling so it is natural to find that SOTA generative models do well here. The techniques are usually validated with metrics such as PSNR and MS-SSIM on datatsets such as kodak. It should be interesting to revisit this field again and look at some of the recent works soon.
-References:
+The neural compression scheme has two components to it - compression rate and distortion. A trade off exists between the two as better reconstruction can be obtained with larger latent structure to derive it from. The compression process involves a feature transformation into a latent space followed by quantisation. This can be stored as bits through arithmetic coding. This is then decoded and recontructed back into images. This is naturally performed by an autoencoder framework, where the entopy of the bits used to store the file can be represented by the entropy of the latent space and the distortion can be measured by the reconstruction error. The papers summarised in this post is from 2017-18, so it may not be the state of the art as of 2021. The ideas here mainly consists of either a autoencoder with variational framework or models in latent space like PixelCNN for entropy coding. This field is closely related to generative modelling so it is natural to find that SOTA generative models do well here. The techniques are usually validated with metrics such as PSNR and MS-SSIM on datatsets such as kodak. It should be interesting to revisit this field again and look at some of the recent works soon.
+
+<b>References:</b>
 1. https://arxiv.org/abs/1703.00395
 2. https://arxiv.org/abs/1802.01436
 3. https://arxiv.org/abs/1801.04260
