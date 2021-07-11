@@ -11,7 +11,7 @@ Before I get into specific applications of transformers, let's look at the build
 Transformer networks are turning out to be the leader across a multitude of problem statements in different input domains such as Natural Language Processing (NLP), Computer Vision (CV), Speech etc. It is also turning out to be excellent on modelling over multiple modalities.
 
 <b>What is a transformer?</b><br>
-Transformer is a combination of different representational blocks such as self-attention <b>(SA)</b>, position-wise feed forward <b>(PWFF)</b>, layer norm <b>(LN)</b>, positional encodings<b> (PE)</b> and residual connections. Many of these ideas were introduced in the years before this architecture was released and they were considered state of the art. Residual connections were widely popularised by the resnet paper - it was considered the gold standard in tasks like image classification. Different attention mechanisms were being developed and it worked as a steroid for sequence to sequence models.
+Transformer [1] is a combination of different representational blocks such as self-attention <b>(SA)</b>, position-wise feed forward <b>(PWFF)</b>, layer norm <b>(LN)</b>, positional encodings<b> (PE)</b> and residual connections. Many of these ideas were introduced in the years before this architecture was released and they were considered state of the art. Residual connections were widely popularised by the resnet paper - it was considered the gold standard in tasks like image classification. Different attention mechanisms were being developed and it worked as a steroid for sequence to sequence models.
 In transformers, the authors found the right way to connect these blocks and it opened various new avenues in research.
 
 The original transformer architecture was introduced for a NLP task - machine translation.
@@ -35,3 +35,6 @@ I will be touching upon specific research on transformers in the coming weeks. I
 <li> reducing time/memory complexity </li>
 <li> different positional encodings  </li>
 <li> architectures inspired by transformers  </li>
+
+<b>References:</b><br>
+[1] https://arxiv.org/abs/1706.03762
