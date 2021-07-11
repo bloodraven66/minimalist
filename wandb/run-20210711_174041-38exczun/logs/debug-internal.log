@@ -1,0 +1,50 @@
+2021-07-11 17:40:42,610 INFO    MainThread:923 [internal.py:wandb_internal():91] W&B internal server running at pid: 923, started at: 2021-07-11 17:40:42.610332
+2021-07-11 17:40:42,612 DEBUG   HandlerThread:923 [handler.py:handle_request():124] handle_request: check_version
+2021-07-11 17:40:42,612 INFO    WriterThread:923 [datastore.py:open_for_write():80] open: /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/run-38exczun.wandb
+2021-07-11 17:40:42,613 DEBUG   SenderThread:923 [sender.py:send():179] send: header
+2021-07-11 17:40:42,613 DEBUG   SenderThread:923 [sender.py:send_request():193] send_request: check_version
+2021-07-11 17:40:43,193 DEBUG   SenderThread:923 [sender.py:send():179] send: run
+2021-07-11 17:40:43,892 INFO    SenderThread:923 [dir_watcher.py:__init__():168] watching files in: /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/files
+2021-07-11 17:40:43,893 INFO    SenderThread:923 [sender.py:_start_run_threads():719] run started: 38exczun with start time 1626005441
+2021-07-11 17:40:43,893 DEBUG   SenderThread:923 [sender.py:send():179] send: summary
+2021-07-11 17:40:43,893 INFO    SenderThread:923 [sender.py:_save_file():841] saving file wandb-summary.json with policy end
+2021-07-11 17:40:43,893 DEBUG   HandlerThread:923 [handler.py:handle_request():124] handle_request: run_start
+2021-07-11 17:40:43,896 DEBUG   HandlerThread:923 [meta.py:__init__():39] meta init
+2021-07-11 17:40:43,896 DEBUG   HandlerThread:923 [meta.py:__init__():53] meta init done
+2021-07-11 17:40:43,896 DEBUG   HandlerThread:923 [meta.py:probe():210] probe
+2021-07-11 17:40:43,907 DEBUG   HandlerThread:923 [meta.py:_setup_git():200] setup git
+2021-07-11 17:40:43,915 DEBUG   HandlerThread:923 [meta.py:_setup_git():207] setup git done
+2021-07-11 17:40:43,915 DEBUG   HandlerThread:923 [meta.py:_save_pip():57] save pip
+2021-07-11 17:40:43,916 DEBUG   HandlerThread:923 [meta.py:_save_pip():71] save pip done
+2021-07-11 17:40:43,916 DEBUG   HandlerThread:923 [meta.py:probe():252] probe done
+2021-07-11 17:40:43,919 DEBUG   SenderThread:923 [sender.py:send():179] send: files
+2021-07-11 17:40:43,919 INFO    SenderThread:923 [sender.py:_save_file():841] saving file wandb-metadata.json with policy now
+2021-07-11 17:40:43,922 DEBUG   HandlerThread:923 [handler.py:handle_request():124] handle_request: stop_status
+2021-07-11 17:40:43,923 DEBUG   SenderThread:923 [sender.py:send_request():193] send_request: stop_status
+2021-07-11 17:40:44,069 DEBUG   HandlerThread:923 [handler.py:handle_request():124] handle_request: pause
+2021-07-11 17:40:44,069 INFO    HandlerThread:923 [handler.py:handle_request_pause():525] stopping system metrics thread
+2021-07-11 17:40:44,399 DEBUG   SenderThread:923 [sender.py:send():179] send: stats
+2021-07-11 17:40:44,894 INFO    Thread-8  :923 [dir_watcher.py:_on_file_created():216] file/dir created: /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/files/wandb-summary.json
+2021-07-11 17:40:44,894 INFO    Thread-8  :923 [dir_watcher.py:_on_file_created():216] file/dir created: /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/files/wandb-metadata.json
+2021-07-11 17:40:44,894 INFO    Thread-8  :923 [dir_watcher.py:_on_file_created():216] file/dir created: /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/files/output.log
+2021-07-11 17:40:44,894 INFO    Thread-8  :923 [dir_watcher.py:_on_file_created():216] file/dir created: /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/files/requirements.txt
+2021-07-11 17:40:45,088 INFO    Thread-11 :923 [upload_job.py:push():137] Uploaded file /tmp/tmpbmvh2xpqwandb/3ds4podp-wandb-metadata.json
+2021-07-11 17:40:57,487 DEBUG   HandlerThread:923 [handler.py:handle_request():124] handle_request: resume
+2021-07-11 17:40:57,487 INFO    HandlerThread:923 [handler.py:handle_request_resume():520] starting system metrics thread
+2021-07-11 17:40:57,938 DEBUG   HandlerThread:923 [handler.py:handle_request():124] handle_request: shutdown
+2021-07-11 17:40:57,939 INFO    HandlerThread:923 [handler.py:finish():638] shutting down handler
+2021-07-11 17:40:58,154 INFO    WriterThread:923 [datastore.py:close():288] close: /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/run-38exczun.wandb
+2021-07-11 17:40:58,402 INFO    SenderThread:923 [sender.py:finish():945] shutting down sender
+2021-07-11 17:40:58,402 INFO    SenderThread:923 [dir_watcher.py:finish():282] shutting down directory watcher
+2021-07-11 17:40:58,896 INFO    SenderThread:923 [dir_watcher.py:finish():312] scan: /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/files
+2021-07-11 17:40:58,896 INFO    SenderThread:923 [dir_watcher.py:finish():318] scan save: /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/files/config.yaml config.yaml
+2021-07-11 17:40:58,896 INFO    SenderThread:923 [dir_watcher.py:finish():318] scan save: /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/files/output.log output.log
+2021-07-11 17:40:58,896 INFO    SenderThread:923 [dir_watcher.py:finish():318] scan save: /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/files/requirements.txt requirements.txt
+2021-07-11 17:40:58,900 INFO    SenderThread:923 [dir_watcher.py:finish():318] scan save: /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/files/wandb-metadata.json wandb-metadata.json
+2021-07-11 17:40:58,900 INFO    SenderThread:923 [dir_watcher.py:finish():318] scan save: /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/files/wandb-summary.json wandb-summary.json
+2021-07-11 17:40:58,900 INFO    SenderThread:923 [file_pusher.py:finish():177] shutting down file pusher
+2021-07-11 17:40:58,900 INFO    SenderThread:923 [file_pusher.py:join():182] waiting for file pusher
+2021-07-11 17:41:00,412 INFO    Thread-14 :923 [upload_job.py:push():137] Uploaded file /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/files/requirements.txt
+2021-07-11 17:41:00,413 INFO    Thread-13 :923 [upload_job.py:push():137] Uploaded file /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/files/config.yaml
+2021-07-11 17:41:00,413 INFO    Thread-15 :923 [upload_job.py:push():137] Uploaded file /home/sathvik/Documents/bloodraven66.github.io/wandb/run-20210711_174041-38exczun/files/wandb-summary.json
+2021-07-11 17:41:01,332 INFO    MainThread:923 [internal.py:handle_exit():78] Internal process exited

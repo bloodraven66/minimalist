@@ -1,0 +1,26 @@
+{
+    "os": "Linux-5.4.0-72-generic-x86_64-with-Ubuntu-18.04-bionic",
+    "python": "3.6.9",
+    "heartbeatAt": "2021-07-11T12:10:43.896895",
+    "startedAt": "2021-07-11T12:10:41.981038",
+    "docker": null,
+    "gpu": "GeForce GTX 1650 Ti",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [
+        "-f",
+        "/home/sathvik/.local/share/jupyter/runtime/kernel-4b203c92-08c3-4c4f-a5ce-95d381cd9709.json"
+    ],
+    "state": "running",
+    "program": "Untitled.ipynb",
+    "root": "/home/sathvik/Documents/bloodraven66.github.io",
+    "git": {
+        "remote": "git@github.com:bloodraven66/bloodraven66.github.io.git",
+        "commit": "6b674b3dbd4804e51c10eb17839789d38fb26cf3"
+    },
+    "email": "bloodraven66@github.com",
+    "host": "Fargo",
+    "username": "sathvik",
+    "executable": "/usr/bin/python3"
+}
